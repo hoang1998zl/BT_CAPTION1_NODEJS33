@@ -110,7 +110,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"user3@gmail.com\",\r\n    \"mat_khau\": \"password1\",\r\n    \"ho_ten\": \"user1\",\r\n    \"tuoi\": 18\r\n}",
+							"raw": "{\r\n    \"email\": \"user4@gmail.com\",\r\n    \"mat_khau\": \"password1\",\r\n    \"ho_ten\": \"user1\",\r\n    \"tuoi\": 18\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -169,7 +169,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250ZW50Ijp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwibWF0X2toYXUiOiJwYXNzd29yZDEiLCJob190ZW4iOiJ1c2VyMSIsInR1b2kiOjE4LCJhbmhfZGFpX2RpZW4iOiJTdHJpbmcifSwiaWF0IjoxNjk1NzE5MTc2LCJleHAiOjE2OTYxNTExNzZ9.m5L5KmyVIPGoY8sQh0zsM1pZjoO-ZhApvVAafv7nYa4",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250ZW50Ijp7Im5ndW9pX2R1bmdfaWQiOjgsImVtYWlsIjoiaGhvYWFuZ0BnbWFpbC5jb20iLCJtYXRfa2hhdSI6IjEyMzQiLCJob190ZW4iOiJob8OgbmciLCJ0dW9pIjoyMCwiYW5oX2RhaV9kaWVuIjoiYXZhdGFyLTE2OTU5ODEyMDAwMDctNTE3NTQ5NjkxLnBuZyJ9LCJpYXQiOjE2OTYwODU0ODAsImV4cCI6MTY5NjUxNzQ4MH0.-9h14q7_E-CVRq7YDMLbWbhiN-LOkyMeHsG9QvZ2yis",
 									"type": "string"
 								}
 							]
@@ -182,7 +182,7 @@
 								{
 									"key": "avatar",
 									"type": "file",
-									"src": "/C:/Users/hhoaa/Downloads/FB_IMG_1660612093003.jpg"
+									"src": "/C:/Users/hhoaa/Downloads/371924390_636911075093588_3813110981899002214_n.jpg"
 								}
 							]
 						},
@@ -321,7 +321,7 @@
 								{
 									"key": "image",
 									"type": "file",
-									"src": "/C:/Users/hhoaa/Downloads/371924390_636911075093588_3813110981899002214_n.jpg"
+									"src": "/C:/Users/hhoaa/Downloads/376364220_648307570759145_6165044864485263876_n.png"
 								},
 								{
 									"key": "mo_ta",
@@ -332,11 +332,11 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:3000/api/image/uploadImage",
+							"raw": "localhost:3001/api/image/uploadImage",
 							"host": [
 								"localhost"
 							],
-							"port": "3000",
+							"port": "3001",
 							"path": [
 								"api",
 								"image",
