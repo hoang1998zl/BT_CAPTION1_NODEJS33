@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model nguoi_dung {
+  nguoi_dung_id Int         @id @default(autoincrement())
+  email         String
+  mat_khau      String
+  ho_ten        String
+  tuoi          Int
+  anh_dai_dien  String?
+  hinh_anh      hinh_anh[]
+  luu_anh       luu_anh[]
+  binh_luan     binh_luan[]
+
+  @@unique([email, ho_ten])
+}
+
+model hinh_anh {
+  hinh_id       Int         @id @default(autoincrement())
+  ten_hinh      String
+  duong_dan     String
+  mo_ta         String?
+  nguoi_dung_id Int
+  nguoi_dung    nguoi_dung  @relation(fields: [nguoi_dung_id], references: [nguoi_dung_id])
+  luu_anh       luu_anh[]
+  binh_luan     binh_luan[]
+
+  @@unique([hinh_id, nguoi_dung_id])
+}
+
+model luu_anh {
+  nguoi_dung_id Int
+  hinh_id       Int
+  ngay_luu      DateTime   @default(now())
+  hinh_anh      hinh_anh   @relation(fields: [hinh_id], references: [hinh_id])
+  nguoi_dung    nguoi_dung @relation(fields: [nguoi_dung_id], references: [nguoi_dung_id])
+
+  @@unique([nguoi_dung_id, hinh_id])
+  @@index([hinh_id, nguoi_dung_id])
+}
+
+model binh_luan {
+  binh_luan_id   Int        @id @default(autoincrement())
+  nguoi_dung_id  Int
+  hinh_id        Int
+  ngay_binh_luan DateTime   @default(now())
+  noi_dung       String
+  nguoi_dung     nguoi_dung @relation(fields: [nguoi_dung_id], references: [nguoi_dung_id])
+  hinh_anh       hinh_anh   @relation(fields: [hinh_id], references: [hinh_id])
+
+  @@index([nguoi_dung_id])
+  @@index([hinh_id])
+}

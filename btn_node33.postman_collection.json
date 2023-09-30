@@ -1,0 +1,718 @@
+{
+	"info": {
+		"_postman_id": "a2d6fa3e-0994-4b99-849b-2b319bef827a",
+		"name": "btn_node33",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29978455"
+	},
+	"item": [
+		{
+			"name": "check",
+			"item": [
+				{
+					"name": "check-connection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/check-connection",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"check-connection"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/getAllUsers",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserByToken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250ZW50Ijp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwibWF0X2toYXUiOiJwYXNzd29yZDEiLCJob190ZW4iOiJ1c2VyMSIsInR1b2kiOjIwLCJhbmhfZGFpX2RpZW4iOiJhdmF0YXItMTY5NTg5MzA5OTQ4MS0yOTM0MTkxMzMuanBnIn0sImlhdCI6MTY5NTkxMjMzMiwiZXhwIjoxNjk2MzQ0MzMyfQ.TPE96C3_-DUE1ihLL1dyKM-7_960SbUyC4oAKrtNdw8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/getUserByToken",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"getUserByToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/getUserById/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"getUserById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user3@gmail.com\",\r\n    \"mat_khau\": \"password1\",\r\n    \"ho_ten\": \"user1\",\r\n    \"tuoi\": 18\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/createUser",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user1@gmail.com\",\r\n    \"mat_khau\": \"password1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadAvatar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250ZW50Ijp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwibWF0X2toYXUiOiJwYXNzd29yZDEiLCJob190ZW4iOiJ1c2VyMSIsInR1b2kiOjE4LCJhbmhfZGFpX2RpZW4iOiJTdHJpbmcifSwiaWF0IjoxNjk1NzE5MTc2LCJleHAiOjE2OTYxNTExNzZ9.m5L5KmyVIPGoY8sQh0zsM1pZjoO-ZhApvVAafv7nYa4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/hhoaa/Downloads/FB_IMG_1660612093003.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/uploadAvatar",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"uploadAvatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mat_khau\": \"password1\",\r\n    \"ho_ten\": \"user1\",\r\n    \"tuoi\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/updateUser/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"updateUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/deleteUser/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"deleteUser",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "hinh_anh",
+			"item": [
+				{
+					"name": "getAllImages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/image/getAllImages",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"image",
+								"getAllImages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadImage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250ZW50Ijp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwibWF0X2toYXUiOiJwYXNzd29yZDEiLCJob190ZW4iOiJ1c2VyMSIsInR1b2kiOjE4LCJhbmhfZGFpX2RpZW4iOiJTdHJpbmcifSwiaWF0IjoxNjk1NzIwMjgwLCJleHAiOjE2OTYxNTIyODB9.HjOi1B1vGNEiGF9-q-rLs9l2Mxrp9V-edxBu2neCEqg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/hhoaa/Downloads/371924390_636911075093588_3813110981899002214_n.jpg"
+								},
+								{
+									"key": "mo_ta",
+									"value": "đây là mô tả",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/image/uploadImage",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"image",
+								"uploadImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateDescriptionByHinh_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250ZW50Ijp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwibWF0X2toYXUiOiJwYXNzd29yZDEiLCJob190ZW4iOiJ1c2VyMSIsInR1b2kiOjIwLCJhbmhfZGFpX2RpZW4iOiJhdmF0YXItMTY5NTg5MzA5OTQ4MS0yOTM0MTkxMzMuanBnIn0sImlhdCI6MTY5NTg5MzM1MywiZXhwIjoxNjk2MzI1MzUzfQ.Q9PhYbWoIaLJqyquGfrDQGzoDYzgbtCZl51CnkQ5aHI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mo_ta\": \"mô tả\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/image/updateDescriptionByHinh_id/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"image",
+								"updateDescriptionByHinh_id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getImageById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/api/image/getImageById/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"image",
+								"getImageById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getImageByName",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/api/image/getImageByName/371924390_636911075093588_3813110981899002214_n.jpg",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"image",
+								"getImageByName",
+								"371924390_636911075093588_3813110981899002214_n.jpg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getImageHasSaveById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250ZW50Ijp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwibWF0X2toYXUiOiJwYXNzd29yZDEiLCJob190ZW4iOiJ1c2VyMSIsInR1b2kiOjIwLCJhbmhfZGFpX2RpZW4iOiJhdmF0YXItMTY5NTg5MzA5OTQ4MS0yOTM0MTkxMzMuanBnIn0sImlhdCI6MTY5NTg5MzM1MywiZXhwIjoxNjk2MzI1MzUzfQ.Q9PhYbWoIaLJqyquGfrDQGzoDYzgbtCZl51CnkQ5aHI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/image/getImageHasSaveById",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"image",
+								"getImageHasSaveById"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteImageById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250ZW50Ijp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwibWF0X2toYXUiOiJwYXNzd29yZDEiLCJob190ZW4iOiJ1c2VyMSIsInR1b2kiOjIwLCJhbmhfZGFpX2RpZW4iOiJhdmF0YXItMTY5NTg5MzA5OTQ4MS0yOTM0MTkxMzMuanBnIn0sImlhdCI6MTY5NTkxMjMzMiwiZXhwIjoxNjk2MzQ0MzMyfQ.TPE96C3_-DUE1ihLL1dyKM-7_960SbUyC4oAKrtNdw8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/image/deleteImageById/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"image",
+								"deleteImageById",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "binh_luan",
+			"item": [
+				{
+					"name": "getAllComments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/comment/getAllComments",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comment",
+								"getAllComments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createComment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250ZW50Ijp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwibWF0X2toYXUiOiJwYXNzd29yZDEiLCJob190ZW4iOiJ1c2VyMSIsInR1b2kiOjE5LCJhbmhfZGFpX2RpZW4iOiJhdmF0YXItMTY5NTcyMTI1MzAzMy01ODQzMDE1ODAuanBnIn0sImlhdCI6MTY5NTg4OTQ5MSwiZXhwIjoxNjk2MzIxNDkxfQ.Xd5FwxCsrwP3wgh0pTid0a4GLbk9kAjgOFuLboMIg_k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"noi_dung\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/comment/createComment/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comment",
+								"createComment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "luu_anh",
+			"item": [
+				{
+					"name": "checkHasSaveImage",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250ZW50Ijp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwibWF0X2toYXUiOiJwYXNzd29yZDEiLCJob190ZW4iOiJ1c2VyMSIsInR1b2kiOjE5LCJhbmhfZGFpX2RpZW4iOiJhdmF0YXItMTY5NTcyMTI1MzAzMy01ODQzMDE1ODAuanBnIn0sImlhdCI6MTY5NTg4OTQ5MSwiZXhwIjoxNjk2MzIxNDkxfQ.Xd5FwxCsrwP3wgh0pTid0a4GLbk9kAjgOFuLboMIg_k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/image/checkHasSaveImage/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"image",
+								"checkHasSaveImage",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDataLuuAnh",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/image/getDataLuuAnh",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"image",
+								"getDataLuuAnh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveImage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250ZW50Ijp7Im5ndW9pX2R1bmdfaWQiOjEsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwibWF0X2toYXUiOiJwYXNzd29yZDEiLCJob190ZW4iOiJ1c2VyMSIsInR1b2kiOjIwLCJhbmhfZGFpX2RpZW4iOiJhdmF0YXItMTY5NTg5MzA5OTQ4MS0yOTM0MTkxMzMuanBnIn0sImlhdCI6MTY5NTg5MzM1MywiZXhwIjoxNjk2MzI1MzUzfQ.Q9PhYbWoIaLJqyquGfrDQGzoDYzgbtCZl51CnkQ5aHI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/save/saveImage/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"save",
+								"saveImage",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
